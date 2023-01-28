@@ -5,7 +5,7 @@
 
 
 .hero-banner-img{
-    background-image: url('../public/images/book_clustered.jpg');
+    background-image: url('/images/book_clustered.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -20,3 +20,24 @@
   height: 100vh;
   background-color: rgba(2, 1, 21, 0.6);
 }
+
+.gd-carousel-wrapper {
+  position: relative;
+}
+
+.gd-carousel{
+  position: unset;
+}
+
+.react-multiple-carousel__arrow{
+  position: absolute;
+} 
+
+.react-multiple-carousel__arrow--left{
+  left: calc(-3% + 1px);
+}
+
+.react-multiple-carousel__arrow--right{
+  right:calc(-3% + 1px)
+}
+
