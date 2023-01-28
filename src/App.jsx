@@ -9,8 +9,8 @@ import Home from "./pages/Home";
         path="/"
         element={<RootLayout/>}
       >
-        <Route index element={<Home/>}/>
-        
+        <Route index element={<Home />} />
+    
       </Route>
     )
   )
