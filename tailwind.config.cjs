@@ -12,7 +12,9 @@ module.exports = {
       roboto: ["Roboto Mono", "monospace"],
       inter: ["Inter", "sans-serif"],
       poppins: ["Poppins", "sans-serif"],
-      unbounded: ["Unbounded", 'cursive'],
+      montserrat: ["Montserrat", "sans-serif"],
+      sans: ["Open Sans", "sans-serif"],
+      alegreya: ["Alegreya Sans", "sans-serif"],
     },
 
     extend: {
@@ -21,8 +23,10 @@ module.exports = {
         veryLightBrown: "#fef3c7",
         lightGray: "#94a3b8",
         veryLightGray: "#f1f5f9",
+        transparent: "rgba(225,225,225,0.5)",
+        slightTransparent: "rgba(225,225,225,0.8)",
         lightBrown: "#fdba74",
-        brown: '#fb923c',
+        brown: "#fb923c",
         deepBrown: "#fb923c",
         darkMoon: "#0f172a",
         whiteSmoke: "#f4f4f5",

@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Roboto+Mono:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Poppins:wght@300&family=Roboto+Mono:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Poppins:wght@300&family=Roboto+Mono:wght@300&family=Unbounded:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Inter&family=Montserrat&family=Open+Sans&display=swap');
 
 
 .hero-banner-img{
@@ -39,5 +41,54 @@
 
 .react-multiple-carousel__arrow--right{
   right:calc(-3% + 1px)
+}
+
+
+
+.pagination{
+  list-style: none;
+  display: flex;
+  justify-content: right;
+  margin-left: auto;
+  width: 50%;
+  padding: 3rem;
+  margin-bottom: 5rem;
+  gap: 5px;
+}
+
+.pagination .page-num{
+  padding: 10px 15px;
+  border-radius: 25px;
+  background-color: #0f172a;
+  color: white;
+  font-family: "Open Sans", "sans-serif";
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.pagination .page-num:hover{
+  background-color: #fb923c;
+  color: #1e293b;
+}
+
+.pagination .active{
+  background-color: #fb923c;
+  color: #1e293b;
+}
+
+ @media screen and  (max-width:768px) {
+ .pagination{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+ }
+
+ .pagination .page-num{
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 1rem;
+ }
+
 }
 
