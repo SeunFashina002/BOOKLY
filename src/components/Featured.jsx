@@ -3,13 +3,13 @@ import PaginatedItems from "./pagination/PaginateFeatured";
 
 const Featured = () => {
     return (
-      <div className="bg-veryLightGray">
-        <div className="flex flex-col justify-between md:px-12 sm:px-6 sm:py-12 mt-12 md:pb-0 md:mt-24 md:flex-row md:items-center">
+      <div className="bg-veryLightGray md:pb-1">
+        <div className="flex flex-col justify-between md:px-12 sm:px-6 sm:pt-12 mt-12 md:pb-0 md:mt-24 md:flex-row md:items-center">
           <h2 className="font-bold text-4xl font-poppins  text-thinDark py-4 sm:mb-4 md:mb-2 sm:text-center md:text-left md:w-1/2">
             Featured
           </h2>
 
-          <div className="border-black bg-veryLightBrown border-brown border rounded-full py-2 px-2 flex flex items-center md:w-1/2 sm:w-full xl:w-1/3">
+          <div className="border-black bg-veryLightBrown border-brown border rounded-full py-2 px-2 flex flex items-center md:w-1/2 sm:w-full xl:w-1/3 sm:mb-6 md:mb-0">
             <input
               type="text"
               className="w-full mx-1 px-2 bg-veryLightBrown border-0 border outline-0 outline  font-alegreya text-2xl placeholder-text-sans"

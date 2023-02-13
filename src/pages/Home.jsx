@@ -1,5 +1,6 @@
 import BannerSlide from "../components/BannerSlide"
 import Category from "../components/Category";
+import Cta from "../components/Cta";
 import Featured from "../components/Featured";
 
 const Home = () => {
@@ -7,7 +8,8 @@ const Home = () => {
       <>
         <BannerSlide />
         <Category />
-        <Featured/>
+        <Featured />
+        <Cta/>
       </>
     );
 }

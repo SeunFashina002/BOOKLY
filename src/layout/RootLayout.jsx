@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const RootLayout = () => {
   return (
@@ -16,12 +17,12 @@ const RootLayout = () => {
           <li className="hover:text-lightBrown">Categories</li>
         </ul>
 
-        <button className="hover:bg-veryLightGray flex flex items-center justify-center hover:text-brown bg-lightGray rounded-full font-bold text-lightBrown hover:text-lightBrown py-1 px-2 text-2xl">
-          <ion-icon className="font-bold" name="sunny-outline"></ion-icon>
+        <button className="hidden hover:bg-veryLightGray flex flex items-center justify-center hover:text-brown bg-lightGray rounded-full font-bold text-lightBrown hover:text-lightBrown py-1 px-2 text-2xl">
+          <ion-icon className="hidden font-bold" name="sunny-outline"></ion-icon>
         </button>
 
-        <button className="hidden hover:text-brown bg-darkMoon rounded-full font-bold text-lightBrown hover:text-lightBrown py-1 px-2 text-2xl">
-          <ion-icon name="moon-outline" className="hidden"></ion-icon>
+        <button className="bg-lightGray hover:text-brown hover:bg-darkMoon flex flex items-center justify-center rounded-full font-bold text-darkMoon hover:text-lightBrown py-1 px-2 text-2xl">
+          <ion-icon name="moon-outline" className="font-bold"></ion-icon>
         </button>
 
         <div className="font-bold text-deepBrown py-1 px-1 text-4xl sm:text-1xl sm:block md:hidden ">
@@ -32,6 +33,8 @@ const RootLayout = () => {
       <main>
         <Outlet />
       </main>
+
+      <Footer/>
     </div>
   );
 };

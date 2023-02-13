@@ -31,19 +31,12 @@
   position: unset;
 }
 
-.react-multiple-carousel__arrow{
+.react-multiple-carousel__arrow::before{
   position: absolute;
+  background-color: #fdba74;
+  padding: .50rem;
+  border-radius: 60px;
 } 
-
-.react-multiple-carousel__arrow--left{
-  left: calc(-3% + 1px);
-}
-
-.react-multiple-carousel__arrow--right{
-  right:calc(-3% + 1px)
-}
-
-
 
 .pagination{
   list-style: none;
