@@ -22,6 +22,7 @@ module.exports = {
         navLinkBlack: "#171717",
         veryLightBrown: "#fef3c7",
         lightGray: "#94a3b8",
+        gray: '#4b5563',
         veryLightGray: "#f1f5f9",
         transparent: "rgba(225,225,225,0.5)",
         slightTransparent: "rgba(225,225,225,0.8)",

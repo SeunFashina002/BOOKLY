@@ -1,24 +1,34 @@
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet} from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 import Footer from "../components/Footer";
 
 const RootLayout = () => {
   return (
-    <div>
+    <>
       <nav className="bg-veryLightGray sticky top-0 z-20 border-b-2 border-lightBrown flex flex-row py-3 justify-between items-center text-navLinkBlack sm:px-6 md:px-12">
         <h1 className="text-2xl font-poppins flex flex items-center">
           <span className="mx-1  flex flex items-center">
             <ion-icon name="book-outline"></ion-icon>
           </span>
-          BOOKLY
+          <NavLink to="/">BOOKLY</NavLink>
         </h1>
         <ul className="hidden flex-row  justify-between space-x-12 items-center font-sans md:flex">
-          <li className="hover:text-lightBrown">Library</li>
-          <li className="hover:text-lightBrown">Featured</li>
-          <li className="hover:text-lightBrown">Categories</li>
+          <li className="hover:text-lightBrown">
+            <NavLink to="/library">Library</NavLink>
+          </li>
+          <li className="hover:text-lightBrown">
+            <NavHashLink smooth to="/#featured" >Featured </NavHashLink>
+          </li>
+          <li className="hover:text-lightBrown">
+            <NavHashLink smooth to="/#categories">Category</NavHashLink>
+          </li>
         </ul>
 
         <button className="hidden hover:bg-veryLightGray flex flex items-center justify-center hover:text-brown bg-lightGray rounded-full font-bold text-lightBrown hover:text-lightBrown py-1 px-2 text-2xl">
-          <ion-icon className="hidden font-bold" name="sunny-outline"></ion-icon>
+          <ion-icon
+            className="hidden font-bold"
+            name="sunny-outline"
+          ></ion-icon>
         </button>
 
         <button className="bg-lightGray hover:text-brown hover:bg-darkMoon flex flex items-center justify-center rounded-full font-bold text-darkMoon hover:text-lightBrown py-1 px-2 text-2xl">
@@ -34,8 +44,8 @@ const RootLayout = () => {
         <Outlet />
       </main>
 
-      <Footer/>
-    </div>
+      <Footer />
+    </>
   );
 };
 

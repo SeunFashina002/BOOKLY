@@ -5,7 +5,7 @@ import categories from "../../../data/category_data";
 
 const Category = () => {
     return (
-      <div className="gd-carousel-wrapper flex-col items-center justify-center py-24 md:flex md:flex-row sm:px-6 md:px-12 sm:py-12  sm:mt-12 md:mt-24 ">
+      <div id='categories' className="gd-carousel-wrapper flex-col items-center justify-center py-24 md:flex md:flex-row sm:px-6 md:px-12 sm:py-12  sm:mt-12 md:mt-24 ">
         <div className="flex flex-col w-full md:w-1/2 md:mr-12">
           <h2 className="text-4xl font-poppins  text-thinDark font-bold py-4 sm:mb-4 md:mb-2 sm:text-center md:text-left">
             Category

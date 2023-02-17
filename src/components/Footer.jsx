@@ -1,3 +1,6 @@
+import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-veryLightGray">
@@ -69,9 +72,17 @@ const Footer = () => {
             Links
           </h2>
           <ul>
-            <li>Library</li>
-            <li className="my-6">Featured</li>
-            <li>Category</li>
+            <Link to="/library">Library</Link>
+            <li className="my-6">
+              <HashLink smooth to="/#featured">
+                Featured
+              </HashLink>
+            </li>
+            <li>
+              <HashLink smooth to="/#categories">
+                Categories
+              </HashLink>
+            </li>
           </ul>
           <button className="font-poppins bg-lightBrown my-6 px-1 py-2 flex flex items-center justify-center text-lg rounded-lg">
             Follow BOOKLY
@@ -85,13 +96,13 @@ const Footer = () => {
           <h2 className="text-2xl font-bold fonts-sans mb-6 md:text-3xl">
             Get updates on new books and features.
           </h2>
-          <div class="flex flex space-x-3 w-full">
+          <div className="flex flex space-x-3 w-full">
             <input
               type="text"
-              class="flex-1 px-4 rounded-full focus:outline-none bg-veryLightBrown text-alegreya font-bold"
+              className="flex-1 px-4 rounded-full focus:outline-none bg-veryLightBrown text-alegreya font-bold"
               placeholder="Enter your email here"
             />
-            <button class="px-6 py-2 text-veryLightBrown rounded-full bg-thinDark hover:bg-brown hover:text-darkMoon focus:outline-none">
+            <button className="px-6 py-2 text-veryLightBrown rounded-full bg-thinDark hover:bg-brown hover:text-darkMoon focus:outline-none">
               Go
             </button>
           </div>

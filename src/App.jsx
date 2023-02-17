@@ -2,18 +2,17 @@ import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } 
 import RootLayout from "./layout/RootLayout";
 import './App.css'
 import Home from "./pages/Home";
+import { Library } from "./pages/Library";
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route
-        path="/"
-        element={<RootLayout/>}
-      >
+      <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
-    
+        <Route index element={<Home />} />
+        <Route path="library" element={<Library />} />
       </Route>
     )
-  )
+  );
 
 
 function App() {

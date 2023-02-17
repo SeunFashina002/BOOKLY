@@ -8,7 +8,7 @@ const Home = () => {
       <>
         <BannerSlide />
         <Category />
-        <Featured />
+        <Featured/>
         <Cta/>
       </>
     );
