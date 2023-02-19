@@ -1,42 +1,52 @@
 import { NavLink, Outlet} from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import Footer from "../components/Footer";
+import { ThemeIcon } from "../components/icons/ThemeIcon";
+import { MenuIcon } from "../components/icons/MenuIcon";
+import { MobileMenu } from "../components/popups/MobileMenu";
+import { useState } from "react";
 
 const RootLayout = () => {
+
+  let [icon, setIcon] = useState(true);
+  let [menu, setMenu] = useState(false);
+
+  const changeIcon = () => {
+    setIcon((prevIcon) => !prevIcon);
+    setMenu((prevState) => !prevState);
+  };
+
   return (
     <>
-      <nav className="bg-veryLightGray sticky top-0 z-20 border-b-2 border-lightBrown flex flex-row py-3 justify-between items-center text-navLinkBlack sm:px-6 md:px-12">
-        <h1 className="text-2xl font-poppins flex flex items-center">
-          <span className="mx-1  flex flex items-center">
-            <ion-icon name="book-outline"></ion-icon>
-          </span>
-          <NavLink to="/">BOOKLY</NavLink>
-        </h1>
-        <ul className="hidden flex-row  justify-between space-x-12 items-center font-sans md:flex">
-          <li className="hover:text-lightBrown">
-            <NavLink to="/library">Library</NavLink>
-          </li>
-          <li className="hover:text-lightBrown">
-            <NavHashLink smooth to="/#featured" >Featured </NavHashLink>
-          </li>
-          <li className="hover:text-lightBrown">
-            <NavHashLink smooth to="/#categories">Category</NavHashLink>
-          </li>
-        </ul>
+      <nav className="z-20 sm:px-2 md:px-12  py-3 bg-veryLightGray border-b-2 border-lightBrown">
+        <div className="relative sticky top-0 z-20 flex flex-row justify-between items-center text-navLinkBlack w-full">
+          <h1 className="text-2xl font-poppins flex flex items-center">
+            <span className="mx-1  flex flex items-center">
+              <ion-icon name="book-outline"></ion-icon>
+            </span>
+            <NavLink to="/">BOOKLY</NavLink>
+          </h1>
+          <ul className="hidden  items-center font-sans text-lg md:text-sm sm:absolute  sm:drop-shadow-2xl sm:rounded-lg sm:bg-veryLightGray justify-center sm:top-24 sm:h-72 sm:w-full md:h-0 md:top-0 md:rounded-0 md:drop-shadow-none md:p-0 md:flex md:flex-row md:space-x-12 md:relative">
+            <li className="hover:text-lightBrown">
+              <NavLink to="/library">Library</NavLink>
+            </li>
+            <li className="hover:text-lightBrown sm:my-6 md:my-0">
+              <NavHashLink smooth to="/#featured">
+                Featured
+              </NavHashLink>
+            </li>
+            <li className="hover:text-lightBrown">
+              <NavHashLink smooth to="/#categories">
+                Category
+              </NavHashLink>
+            </li>
+          </ul>
 
-        <button className="hidden hover:bg-veryLightGray flex flex items-center justify-center hover:text-brown bg-lightGray rounded-full font-bold text-lightBrown hover:text-lightBrown py-1 px-2 text-2xl">
-          <ion-icon
-            className="hidden font-bold"
-            name="sunny-outline"
-          ></ion-icon>
-        </button>
+          <MobileMenu icon={icon}/>
 
-        <button className="bg-lightGray hover:text-brown hover:bg-darkMoon flex flex items-center justify-center rounded-full font-bold text-darkMoon hover:text-lightBrown py-1 px-2 text-2xl">
-          <ion-icon name="moon-outline" className="font-bold"></ion-icon>
-        </button>
+          <ThemeIcon />
 
-        <div className="font-bold text-deepBrown py-1 px-1 text-4xl sm:text-1xl sm:block md:hidden ">
-          <ion-icon name="menu-outline"></ion-icon>
+          <MenuIcon icon={icon} changeIcon={changeIcon}/>
         </div>
       </nav>
 
