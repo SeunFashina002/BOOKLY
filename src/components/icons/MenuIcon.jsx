@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export const MenuIcon = ({changeIcon, icon}) => {
     
   let displayIcon = icon ? "menu-outline" : "close-outline";

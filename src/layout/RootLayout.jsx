@@ -9,17 +9,15 @@ import { useState } from "react";
 const RootLayout = () => {
 
   let [icon, setIcon] = useState(true);
-  let [menu, setMenu] = useState(false);
 
   const changeIcon = () => {
     setIcon((prevIcon) => !prevIcon);
-    setMenu((prevState) => !prevState);
   };
 
   return (
     <>
-      <nav className="z-20 sm:px-2 md:px-12  py-3 bg-veryLightGray border-b-2 border-lightBrown">
-        <div className="relative sticky top-0 z-20 flex flex-row justify-between items-center text-navLinkBlack w-full">
+      <nav className="z-20 sm:px-2 md:px-12  py-3 bg-veryLightGray border-b-2 border-lightBrown sticky top-0 z-20">
+        <div className="relative  flex flex-row justify-between items-center text-navLinkBlack w-full">
           <h1 className="text-2xl font-poppins flex flex items-center">
             <span className="mx-1  flex flex items-center">
               <ion-icon name="book-outline"></ion-icon>
@@ -42,11 +40,11 @@ const RootLayout = () => {
             </li>
           </ul>
 
-          <MobileMenu icon={icon}/>
+          <MobileMenu icon={icon} />
 
           <ThemeIcon />
 
-          <MenuIcon icon={icon} changeIcon={changeIcon}/>
+          <MenuIcon icon={icon} changeIcon={changeIcon} />
         </div>
       </nav>
 
