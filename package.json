@@ -14,7 +14,8 @@
     "react-multi-carousel": "^2.8.2",
     "react-paginate": "^8.1.4",
     "react-router-dom": "^6.7.0",
-    "react-router-hash-link": "^2.4.3"
+    "react-router-hash-link": "^2.4.3",
+    "react-router-scroll-to-top": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
