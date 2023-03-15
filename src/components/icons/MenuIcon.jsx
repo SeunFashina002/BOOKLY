@@ -4,7 +4,7 @@ export const MenuIcon = ({changeIcon, icon}) => {
 
   return (
     <button
-      className="font-bold text-deepBrown py-1 px-1 text-4xl sm:text-1xl sm:block md:hidden"
+      className="text-darkMoon font-bold dark:text-deepBrown py-1 px-1 text-4xl sm:text-1xl sm:block md:hidden"
       onClick={changeIcon}
     >
       <ion-icon name={displayIcon}></ion-icon>
