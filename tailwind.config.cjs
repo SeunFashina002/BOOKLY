@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx}"],
+  darkMode: "class",
   theme: {
     screens: {
       sm: "280px",
@@ -16,6 +17,7 @@ module.exports = {
       sans: ["Open Sans", "sans-serif"],
       alegreya: ["Alegreya Sans", "sans-serif"],
     },
+    
 
     extend: {
       colors: {
