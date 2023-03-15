@@ -6,7 +6,7 @@ export const SearchBar = () => {
           className="w-full mx-1 px-2 bg-veryLightBrown border-0 border outline-0 outline  font-alegreya text-2xl placeholder-text-sans"
           placeholder="search book by name"
         />
-        <button className="flex flex items-center hover:bg-lightGray hover:text-whiteSmoke bg-veryLightGray rounded-full font-bold text-darkMoon hover:text-lightBrown py-1 px-2 text-2xl">
+        <button className="dark:text-brown dark:bg-thinDark flex flex items-center hover:bg-lightGray hover:text-whiteSmoke bg-veryLightGray rounded-full font-bold text-darkMoon hover:text-lightBrown py-1 px-2 text-2xl">
           <ion-icon name="search-outline"></ion-icon>
         </button>
       </div>

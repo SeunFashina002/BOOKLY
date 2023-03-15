@@ -5,12 +5,12 @@ import categories from "../../../data/category_data";
 
 const Category = () => {
     return (
-      <div id='categories' className="gd-carousel-wrapper flex-col items-center justify-center py-24 md:flex md:flex-row sm:px-6 md:px-12 sm:py-12  sm:mt-12 md:mt-24 ">
+      <div id='categories' className="dark:bg-darkMoon gd-carousel-wrapper flex-col items-center justify-center py-24 md:flex md:flex-row sm:px-6 md:px-12">
         <div className="flex flex-col w-full md:w-1/2 md:mr-12">
-          <h2 className="text-4xl font-poppins  text-thinDark font-bold py-4 sm:mb-4 md:mb-2 sm:text-center md:text-left">
+          <h2 className="dark:text-lightGray text-4xl font-poppins  text-thinDark font-bold py-4 sm:mb-4 md:mb-2 sm:text-center md:text-left">
             Category
           </h2>
-          <p className="font-inter text-1xl text-darkMoon sm:mb-12 md:mb-8 sm:text-center md:text-left">
+          <p className="dark:text-lightGray font-inter text-1xl text-darkMoon sm:mb-12 md:mb-8 sm:text-center md:text-left">
             Bookly gives you the advantage of going for the books related to
             your specific field of interest by grouping all books into
             categories.
