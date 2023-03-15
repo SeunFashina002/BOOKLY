@@ -4,9 +4,9 @@ import { SearchBar } from "./SearchBar";
 
 const Featured = () => {
     return (
-      <div className="bg-veryLightGray md:pb-1 sm:px-6 md:px-12" id="featured">
-        <div className="flex flex-col justify-between sm:pt-12  mt-12 md:pb-0 md:mt-24 md:flex-row md:items-center">
-          <h2 className="font-bold text-4xl font-poppins  text-thinDark py-4 sm:mb-4 md:mb-2 sm:text-center md:text-left md:w-1/2">
+      <div className="dark:bg-thinDark bg-veryLightGray md:pb-1" id="featured">
+        <div className="flex flex-col justify-between sm:pt-12  pt-12 md:pb-0 md:pt-24 md:flex-row md:items-center sm:px-6 md:px-12">
+          <h2 className="dark:text-lightGray font-bold text-4xl font-poppins  text-thinDark py-4 sm:mb-4 md:mb-2 sm:text-center md:text-left md:w-1/2">
             Featured
           </h2>
 
