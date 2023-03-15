@@ -4,7 +4,7 @@ import { NavHashLink } from "react-router-hash-link";
 export const MobileMenu = ({icon}) => {
     let display = icon ?  'none' : 'flex'
     return (
-        <ul style={{display: display}} className="hidden items-center font-sans text-lg md:text-sm sm:absolute sm:flex-col sm:drop-shadow-2xl sm:rounded-lg sm:bg-veryLightGray justify-center sm:top-24 sm:h-72 sm:w-full md:h-0 md:top-0 md:rounded-0 md:drop-shadow-none md:p-0 md:hidden md:space-x-12 md:relative">
+        <ul style={{display: display}} className="dark:bg-thinDark dark:border-lightGray dark:border-2 dark:text-veryLightGray  hidden items-center font-sans text-lg md:text-sm sm:absolute sm:flex-col sm:drop-shadow-2xl sm:rounded-lg sm:bg-veryLightGray justify-center sm:top-24 sm:h-72 sm:w-full md:h-0 md:top-0 md:rounded-0 md:drop-shadow-none md:p-0 md:hidden md:space-x-12 md:relative">
         <li className="hover:text-lightBrown">
           <NavLink to="/library">Library</NavLink>
         </li>
