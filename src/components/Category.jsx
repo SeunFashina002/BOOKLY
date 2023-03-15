@@ -1,6 +1,6 @@
 import Carousel from "react-multi-carousel";
 import { responsive } from "../components/Carousel";
-import categories from "../../data/category_data";
+import categories from "../data/category_data";
 
 const Category = () => {
     return (
