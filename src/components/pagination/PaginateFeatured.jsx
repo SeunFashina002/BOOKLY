@@ -23,8 +23,11 @@ export default function PaginatedItems({ data, label, isVisible}) {
 
   return (
     <>
-      <FilterList isVisible={isVisible} />
-      <div className="gap-4 md:gap-10 md:mb-12 md:my-12 md:pt-0 sm:flex sm:flex-col sm:items-center md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="sm:px-6 md:px-12">
+        <FilterList isVisible={isVisible} />
+      </div>
+
+      <div className="gap-4 md:gap-10 md:mb-12 md:my-12 md:pt-0 sm:flex sm:flex-col sm:items-center md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:px-6 md:px-12">
         {currentItems.map((item, index) => (
           <div
             key={index}
@@ -35,11 +38,11 @@ export default function PaginatedItems({ data, label, isVisible}) {
               src={item.coverImg}
               alt={item.alt}
             />
-            <div className="px-3 py-1 bg-thinDark rounded-b-lg">
-              <h5 className="text-whiteSmoke text-lg font-medium font-inter mb-2">
+            <div className="dark:bg-darkMoon px-3 py-1 bg-thinDark rounded-b-lg">
+              <h5 className="dark:text-veryLightGray text-veryLightGray text-lg font-medium font-inter mb-2">
                 {item.title}
               </h5>
-              <p className="text-lightGray text-base text-alegreya mb-4 text-xs">
+              <p className="dark:text-lightGray text-lightGray text-base text-alegreya mb-4 text-xs">
                 {item.author}
               </p>
 
@@ -52,9 +55,6 @@ export default function PaginatedItems({ data, label, isVisible}) {
                     {tag}
                   </p>
                 ))}
-                {/* <p className="p-2 bg-gray text-whiteSmoke rounded-full mr-2 my-1 text-sm">Frontend</p>
-              <p className="p-2 bg-gray text-whiteSmoke rounded-full mr-2 my-1 text-sm">Web development</p>
-              <p className="p-2 bg-gray text-whiteSmoke rounded-full mr-2 my-1 text-sm">JavaScript</p> */}
               </div>
             </div>
 
