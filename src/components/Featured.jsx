@@ -1,4 +1,4 @@
-import featured from "../../../data/featured_data";
+import featured from "../../data/featured_data";
 import PaginatedItems from "./pagination/PaginateFeatured";
 import { SearchBar } from "./SearchBar";
 

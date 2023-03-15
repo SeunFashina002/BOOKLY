@@ -1,5 +1,5 @@
 import PaginatedItems from "../components/pagination/PaginateFeatured";
-import books from "../../../data/books";
+import books from "../../data/books";
 import { SearchBar } from "../components/SearchBar";
 import { FilterIcon } from "../components/icons/FilterIcon";
 import { useState } from "react";
