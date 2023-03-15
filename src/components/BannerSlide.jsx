@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const BannerSlide = () => {
     return (
-      <div id="home" className="hero-banner-img relative flex flex-col justify-center items-center md:px-12">
+      <div id="home" className="dark:bg-darkMoon hero-banner-img relative flex flex-col justify-center items-center md:px-12">
         <div className="absolute  flex flex-col justify-center text-center items-center w-full sm:px-3">
           <h1 className="z-10 text-white font-bold font-montserrat  sm:text-4xl md:text-6xl">
             Free books about your favorite programming languages across the
