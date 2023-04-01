@@ -1,8 +1,24 @@
 import Carousel from "react-multi-carousel";
 import { responsive } from "../components/Carousel";
-import categories from "../data/category_data";
+import axios from 'axios'
+import { BASE_URL } from "../constants";
+import { useState, useEffect } from "react";
+
 
 const Category = () => {
+  const [categories, setCategories] = useState([])
+
+  useEffect(() => {
+      axios
+        .get(`${BASE_URL}/api/v1/books-category/`)
+        .then((response) => {
+          setCategories(response.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+  }, [])
+
     return (
       <div id='categories' className="dark:bg-darkMoon gd-carousel-wrapper flex-col items-center justify-center py-24 md:flex md:flex-row sm:px-6 md:px-12">
         <div className="flex flex-col w-full md:w-1/2 md:mr-12">
@@ -30,12 +46,12 @@ const Category = () => {
                 className="relative flex flex-col rounded-lg text-center items-center justify-center bg-brown sm:w-11/12  sm:h-72 md:w-2/3 md:h-52"
               >
                 <img
-                  src={category.coverImg}
-                  alt={category.alt}
+                  src={category.image}
+                  alt={category.alt == '' ? 'random books image' : category.alt}
                   className="h-full w-full rounded-lg"
                 />
                 <p className="absolute bg-transparent text-darkMoon font-montserrat font-bold px-1 mx-1 rounded-lg">
-                  {category.title}
+                  {category.name}
                 </p>
               </div>
             ))}
