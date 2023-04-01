@@ -8,7 +8,7 @@ export default function PaginatedItems({ data, label, isVisible}) {
   const [currentItems, setCurrentItems] = useState([]);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
-  const itemsPerPage = 6;
+  const itemsPerPage = 8;
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
