@@ -14,13 +14,15 @@ const Featured = () => {
   
   useEffect(() => {
     // console.log(query);
-    axios.get(`${BASE_URL}api/v1/featured-books/?search=${query}`)
+    
+    axios
+      .get(`${BASE_URL}/api/v1/featured-books/`)
       .then((response) => {
-      setFeatured(response.data)
+        setFeatured(response.data);
       })
       .catch((error) => {
-      console.log(error);
-    })
+        console.log(error);
+      });
   }, [query])
 
     return (
