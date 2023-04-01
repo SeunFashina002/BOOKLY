@@ -16,7 +16,7 @@ const Featured = () => {
     // console.log(query);
     
     axios
-      .get(`${BASE_URL}/api/v1/featured-books/`)
+      .get(`${BASE_URL}/api/v1/featured-books/?search=${query}`)
       .then((response) => {
         setFeatured(response.data);
       })
