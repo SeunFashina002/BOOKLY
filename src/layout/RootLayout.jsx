@@ -15,10 +15,10 @@ const RootLayout = () => {
 
   return (
     <>
-      <nav className="dark:bg-darkMoon z-20 sm:px-2 md:px-12  py-3 bg-veryLightGray border-b-2 border-lightBrown dark:border-b-0 sticky top-0 z-20">
+      <nav className="dark:bg-darkMoon z-20 sm:px-2 md:px-12  py-3 bg-veryLightGray border-b-2 border-lightBrown dark:border-b-0 sticky top-0">
         <div className="relative  flex flex-row justify-between items-center text-navLinkBlack w-full">
-          <h1 className="text-2xl font-poppins flex flex items-center">
-            <span className="mx-1  flex flex items-center dark:text-white">
+          <h1 className="text-2xl font-poppins flex items-center">
+            <span className="mx-1  flex items-center dark:text-white">
               <ion-icon name="book-outline"></ion-icon>
             </span>
             <NavLink className="dark:text-lightGray" to="/">
