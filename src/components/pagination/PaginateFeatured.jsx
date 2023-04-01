@@ -39,10 +39,10 @@ export default function PaginatedItems({ data, label, isVisible}) {
               alt={item.alt}
             />
             <div className="dark:bg-darkMoon px-3 py-1 bg-thinDark rounded-b-lg">
-              <h5 className="dark:text-veryLightGray text-veryLightGray text-lg font-medium font-inter mb-2">
+              <h5 className="dark:text-veryLightGray text-veryLightGray text-md font-medium font-inter mb-2">
                 {item.title}
               </h5>
-              <p className="dark:text-lightGray text-lightGray text-base text-alegreya mb-4">
+              <p className="dark:text-lightGray text-lightGray text-xs text-alegreya mb-4">
                 {item.author}
               </p>
 
