@@ -14,7 +14,7 @@ const Featured = () => {
   
   useEffect(() => {
     // console.log(query);
-    axios.get(`http://127.0.0.1:8000/api/v1/featured-books/?search=${query}`)
+    axios.get(`${BASE_URL}api/v1/featured-books/?search=${query}`)
       .then((response) => {
       setFeatured(response.data)
       })
