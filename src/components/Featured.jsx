@@ -1,8 +1,21 @@
-import featured from "../data/featured_data";
+import { useState, useEffect } from "react";
 import PaginatedItems from "./pagination/PaginateFeatured";
 import { SearchBar } from "./SearchBar";
+import axios from 'axios'
+import { BASE_URL } from "../constants";
 
 const Featured = () => {
+  const [featured, setFeatured] = useState([])
+  useEffect(() => {
+    axios.get(`${BASE_URL}/api/v1/featured-books/`)
+      .then((response) => {
+      setFeatured(response.data)
+      })
+      .catch((error) => {
+      console.log(error);
+    })
+  }, [])
+
     return (
       <div className="dark:bg-thinDark bg-veryLightGray md:pb-1" id="featured">
         <div className="flex flex-col justify-between sm:pt-12  pt-12 md:pb-0 md:pt-24 md:flex-row md:items-center sm:px-6 md:px-12">

@@ -35,14 +35,14 @@ export default function PaginatedItems({ data, label, isVisible}) {
           >
             <img
               className="rounded-t-lg md:h-72"
-              src={item.coverImg}
+              src={item.cover_image}
               alt={item.alt}
             />
             <div className="dark:bg-darkMoon px-3 py-1 bg-thinDark rounded-b-lg">
               <h5 className="dark:text-veryLightGray text-veryLightGray text-lg font-medium font-inter mb-2">
                 {item.title}
               </h5>
-              <p className="dark:text-lightGray text-lightGray text-base text-alegreya mb-4 text-xs">
+              <p className="dark:text-lightGray text-lightGray text-base text-alegreya mb-4">
                 {item.author}
               </p>
 
@@ -61,9 +61,9 @@ export default function PaginatedItems({ data, label, isVisible}) {
             <p className="absolute bg-deepBrown text-thinDark font-bold font-montserrat w-36 px-3 py-1 rounded-br-full top-0 left-0">
               {label}
             </p>
-            <button className="hover:bg-transparent hover:text-thinDark hover:border-darkMoon hover:border absolute inset-x-0 inset-y-0 h-8 w-1/3 my-auto mx-auto bg-veryLightBrown text-darkMoon border-lightBrown border font-bold rounded-full">
+            <a href={item.book_url} className="flex flex-col items-center justify-center hover:bg-transparent hover:text-thinDark hover:border-darkMoon hover:border absolute inset-x-0 inset-y-0 h-8 w-1/3 my-auto mx-auto bg-veryLightBrown text-darkMoon border-lightBrown text-center border font-bold rounded-full">
               view book
-            </button>
+            </a>
           </div>
         ))}
       </div>
