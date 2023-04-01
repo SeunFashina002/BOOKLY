@@ -6,15 +6,22 @@ import { BASE_URL } from "../constants";
 
 const Featured = () => {
   const [featured, setFeatured] = useState([])
+  const [query, setQuery] = useState('')
+
+  const handleSearch = (query) => (
+    setQuery(query)
+  )
+  
   useEffect(() => {
-    axios.get(`${BASE_URL}/api/v1/featured-books/`)
+    // console.log(query);
+    axios.get(`http://127.0.0.1:8000/api/v1/featured-books/?search=${query}`)
       .then((response) => {
       setFeatured(response.data)
       })
       .catch((error) => {
       console.log(error);
     })
-  }, [])
+  }, [query])
 
     return (
       <div className="dark:bg-thinDark bg-veryLightGray md:pb-1" id="featured">
@@ -23,7 +30,7 @@ const Featured = () => {
             Featured
           </h2>
 
-          <SearchBar />
+          <SearchBar onSearch={handleSearch} />
         </div>
 
         <PaginatedItems label="Featured" data={featured} />
