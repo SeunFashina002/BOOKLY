@@ -7,6 +7,7 @@ import { BASE_URL } from "../constants";
 const Featured = () => {
   const [featured, setFeatured] = useState([])
   const [query, setQuery] = useState('')
+  const [isloading, setIsLoading] = useState(true)
 
   const handleSearch = (query) => (
     setQuery(query)
@@ -19,9 +20,11 @@ const Featured = () => {
       .get(`${BASE_URL}/api/v1/featured-books/?search=${query}`)
       .then((response) => {
         setFeatured(response.data);
+        setIsLoading(false)
       })
       .catch((error) => {
         console.log(error);
+        setIsLoading(false);
       });
   }, [query])
 
@@ -35,7 +38,7 @@ const Featured = () => {
           <SearchBar onSearch={handleSearch} />
         </div>
 
-        <PaginatedItems label="Featured" data={featured} />
+        <PaginatedItems label="Featured" data={featured} loading={isloading}/>
       </div>
     );
 }
